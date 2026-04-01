@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Immobilière</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 SYSTÈME DE GESTION DE BIEN IMMOBILIERS</h1>
+            <p>Version Web - Gestion complète</p>
+        </div>
+        
+        <div class="toolbar">
+            <button onclick="actualiserTout()" class="btn-primary">🔄 Actualiser</button>
+            <button onclick="sauvegarderTout()" class="btn-success">💾 Sauvegarder</button>
+            <button onclick="ouvrirDossier()" class="btn-info">📂 Choisir dossier</button>
+        </div>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="menu-item" onclick="showSection('personne')">1️⃣ Ajouter Personne</div>
+                <div class="menu-item" onclick="showSection('bien')">2️⃣ Ajouter Bien</div>
+                <div class="menu-item" onclick="showSection('contrat')">3️⃣ Ajouter Contrat</div>
+                <div class="menu-item" onclick="showSection('list_personnes')">4️⃣ Liste Personnes</div>
+                <div class="menu-item" onclick="showSection('list_biens')">5️⃣ Liste Biens</div>
+                <div class="menu-item" onclick="showSection('list_contrats')">6️⃣ Liste Contrats</div>
+                <div class="menu-item" onclick="showSection('search_personne')">7️⃣ Rechercher Personne</div>
+                <div class="menu-item" onclick="showSection('search_bien')">8️⃣ Rechercher Bien</div>
+                <div class="menu-item" onclick="showSection('search_contrat')">9️⃣ Rechercher Contrat</div>
+                <div class="menu-item" onclick="showSection('delete_personne')">🔟 Supprimer Personne</div>
+                <div class="menu-item" onclick="showSection('delete_bien')">1️⃣1️⃣ Supprimer Bien</div>
+                <div class="menu-item" onclick="showSection('delete_contrat')">1️⃣2️⃣ Supprimer Contrat</div>
+            </div>
+            
+            <div class="main">
+                <div id="status" class="status"></div>
+                <div id="dynamicContent"></div>
+                <div id="output" class="output">
+                    <strong>📋 RÉSULTAT</strong><br>
+                    <div id="resultat">Bienvenue! Clique sur "Choisir dossier" pour sélectionner tes fichiers.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
